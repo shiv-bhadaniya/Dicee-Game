@@ -1,0 +1,33 @@
+var randomNumber1 = Math.floor(Math.random() * 6) + 1; //  random number 1 to 6
+
+var randomeDiceImage = "dice" + randomNumber1 + ".png"; // set random number img path
+
+var randomImageSource = "images/" + randomeDiceImage; // final set random number img path
+
+var image1 = document.querySelectorAll("img")[0];
+
+image1.setAttribute("src", randomImageSource); // change img to rnadom
+
+
+
+// chage 2 img
+
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+var randomeDiceImage2 = "dice" + randomNumber2 + ".png";
+
+var randomImageSource2 = "images/" + randomeDiceImage2;
+
+var image2 = document.querySelectorAll("img")[1];
+
+image2.setAttribute("src", randomImageSource2);
+
+
+
+if(randomNumber1 > randomNumber2) {
+  document.querySelector("h1").innerHTML = "Player 1 Wins!";
+} else if (randomNumber1 < randomNumber2) {
+  document.querySelector("h1").innerHTML = "Player 2 Wins!";
+} else {
+  document.querySelector("h1").innerHTML = "Draws!!";
+}
